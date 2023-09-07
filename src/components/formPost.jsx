@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addPegawai } from "../pegawaiSlice"; // Menggunakan slice yang sesuai
-import axios from "axios";
 
 export default function FormPost() {
   const navigate = useNavigate();
