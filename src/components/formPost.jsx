@@ -27,7 +27,7 @@ export default function FormPost() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/crud/");
+    navigate("/crud-project/");
     // Dispatch action dari slice untuk menambah pegawai
     dispatch(addPegawai(newPegawai));
 
