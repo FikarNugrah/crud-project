@@ -37,7 +37,7 @@ export default function DataPegawai() {
     <div className="container">
       <div className="table-area">
         <Table>
-          <TableHead>
+          <TableHead style={{ backgroundColor: "gray" }}>
             <TableRow>
               <TableCell style={{ textAlign: "center", fontWeight: "600" }}>
                 No.
