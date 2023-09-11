@@ -80,7 +80,9 @@ export default function DataPegawai() {
                   <TableCell style={{ textAlign: "center" }}>
                     {i + 1}.
                   </TableCell>
-                  <TableCell>{list.nama}</TableCell>
+                  <TableCell style={{ textAlign: "center" }}>
+                    {list.nama}
+                  </TableCell>
                   <TableCell style={{ textAlign: "center" }}>
                     {list.provinsi}
                   </TableCell>

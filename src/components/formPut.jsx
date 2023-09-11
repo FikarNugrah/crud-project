@@ -4,7 +4,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { updatePegawai } from "../pegawaiSlice";
 
-export default function FormPut({ onCancel }) {
+export default function FormPut() {
   const navigate = useNavigate();
   const location = useLocation();
   const { data } = location.state;
