@@ -9,7 +9,7 @@ body {
   font-family: "Poppins", sans-serif;
   text-decoration: none;
   list-style-type: none;
-  /* text-transform: capitalize; */
+  text-transform: capitalize;
 }
 
 .table-area {
@@ -99,11 +99,11 @@ input {
   color: red;
 }
 
-/* .btn-post {
+.btn-post {
   display: flex;
   flex-direction: column;
   gap: 5px;
-} */
+}
 
 .add {
   width: 100px;

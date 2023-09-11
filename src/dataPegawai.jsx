@@ -37,7 +37,7 @@ export default function DataPegawai() {
     <div className="container">
       <div className="table-area">
         <Table>
-          <TableHead style={{ backgroundColor: "gray" }}>
+          <TableHead style={{ backgroundColor: "#e4e3e3" }}>
             <TableRow>
               <TableCell style={{ textAlign: "center", fontWeight: "600" }}>
                 No.
@@ -80,7 +80,9 @@ export default function DataPegawai() {
                   <TableCell style={{ textAlign: "center" }}>
                     {i + 1}.
                   </TableCell>
-                  <TableCell>{list.nama}</TableCell>
+                  <TableCell style={{ textAlign: "center" }}>
+                    {list.nama}
+                  </TableCell>
                   <TableCell style={{ textAlign: "center" }}>
                     {list.provinsi}
                   </TableCell>
