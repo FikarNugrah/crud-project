@@ -7,7 +7,7 @@ import { updatePegawai } from "../pegawaiSlice";
 export default function FormPut() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { data } = location.state;
+  const { data } = location.state; // destructuring
 
   const [updatedData, setUpdatedData] = useState(
     data || {
@@ -40,7 +40,7 @@ export default function FormPut() {
     if (data && data.id) {
       dispatch(updatePegawai({ id: data.id, updatedData }));
     }
-    navigate("/crud-project/");
+    navigate("/crud-project/", { replace: true });
   };
 
   return (
@@ -69,7 +69,7 @@ export default function FormPut() {
             />
           </label>
           <label htmlFor="kabupaten">
-            <p>kabupaten:</p>
+            <p>kabupaten / kota:</p>
             <input
               type="text"
               name="kabupaten"
@@ -109,7 +109,9 @@ export default function FormPut() {
             />
           </label>
           <button onClick={handleUpdate}>Update</button>
-          <button onClick={() => navigate("/crud-project/")}>Cancel</button>
+          <button onClick={() => navigate("/crud-project/", { replace: true })}>
+            Cancel
+          </button>
         </div>
       </div>
     </div>

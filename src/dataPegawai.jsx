@@ -4,7 +4,6 @@ import "./index.css";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { getPegawai } from "./pegawaiSlice";
-
 import Delete from "./components/delate";
 import {
   Table,
@@ -25,10 +24,10 @@ export default function DataPegawai() {
   }, [dispatch]);
 
   const handleEditClick = (id) => {
-    const editedEmployee = pegawai.find((employee) => employee.id === id);
-    if (editedEmployee) {
+    const editPegawai = pegawai.find((dataPegawai) => dataPegawai.id === id);
+    if (editPegawai) {
       navigate(`/crud-project/update/${id}`, {
-        state: { data: editedEmployee },
+        state: { data: editPegawai },
       });
     }
   };
@@ -49,7 +48,7 @@ export default function DataPegawai() {
                 Provinsi
               </TableCell>
               <TableCell style={{ textAlign: "center", fontWeight: "600" }}>
-                Kabupaten
+                Kabupaten / Kota
               </TableCell>
               <TableCell style={{ textAlign: "center", fontWeight: "600" }}>
                 Kecamatan

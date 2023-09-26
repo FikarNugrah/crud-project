@@ -2,50 +2,70 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-// Buat async thunk untuk mengambil data pegawai dari API
+// ACTION
 export const getPegawai = createAsyncThunk("pegawai/getPegawai", async () => {
-  const response = await axios.get(
-    "https://61601920faa03600179fb8d2.mockapi.io/pegawai"
-  );
-  return response.data;
-});
-
-// Buat async thunk untuk menambahkan pegawai baru
-export const addPegawai = createAsyncThunk(
-  "pegawai/addPegawai",
-  async (newPegawai) => {
-    const response = await axios.post(
-      "https://61601920faa03600179fb8d2.mockapi.io/pegawai",
-      newPegawai
+  try {
+    const response = await axios.get(
+      "https://61601920faa03600179fb8d2.mockapi.io/pegawai"
     );
     return response.data;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    throw error;
+  }
+});
+
+export const addPegawai = createAsyncThunk(
+  "pegawai/addPegawai",
+  async (newPegawaiFromHandleSubmit) => {
+    try {
+      const response = await axios.post(
+        "https://61601920faa03600179fb8d2.mockapi.io/pegawai",
+        newPegawaiFromHandleSubmit
+      );
+      return response.data;
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      throw error;
+    }
   }
 );
 
-// Buat async thunk untuk menghapus pegawai
 export const deletePegawai = createAsyncThunk(
   "pegawai/deletePegawai",
   async (id) => {
-    await axios.delete(
-      `https://61601920faa03600179fb8d2.mockapi.io/pegawai/${id}`
-    );
-    return id;
+    try {
+      await axios.delete(
+        `https://61601920faa03600179fb8d2.mockapi.io/pegawai/${id}`
+      );
+      return id;
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      throw error;
+    }
   }
 );
 
-// Buat async thunk untuk memperbarui pegawai
 export const updatePegawai = createAsyncThunk(
   "pegawai/updatePegawai",
   async ({ id, updatedData }) => {
-    const response = await axios.put(
-      `https://61601920faa03600179fb8d2.mockapi.io/pegawai/${id}`,
-      updatedData
-    );
-    // console.log(response.data);
-    return response.data;
+    try {
+      const response = await axios.put(
+        `https://61601920faa03600179fb8d2.mockapi.io/pegawai/${id}`,
+        updatedData
+      );
+      // console.log(response.data);
+      return response.data;
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      throw error;
+    }
   }
 );
 
+//
+
+// REDUCER
 const pegawaiSlice = createSlice({
   name: "pegawai",
   initialState: [],

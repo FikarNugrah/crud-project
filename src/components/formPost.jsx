@@ -26,11 +26,9 @@ export default function FormPost() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/crud-project/");
-    // Dispatch action dari slice untuk menambah pegawai
+    navigate("/crud-project/", { replace: true });
     dispatch(addPegawai(newPegawai));
 
-    // Mengosongkan form
     setNewPegawai({
       nama: "",
       provinsi: "",
@@ -67,7 +65,7 @@ export default function FormPost() {
             />
           </label>
           <label htmlFor="kabupaten">
-            <p>kabupaten:</p>
+            <p>kabupaten / Kota:</p>
             <input
               type="text"
               name="kabupaten"
@@ -108,7 +106,11 @@ export default function FormPost() {
           </label>
           <div className="btn-post">
             <button type="submit">Post</button>
-            <button onClick={() => navigate("/crud-project/")}>Cancel</button>
+            <button
+              onClick={() => navigate("/crud-project/", { replace: true })}
+            >
+              Cancel
+            </button>
           </div>
         </form>
       </div>
