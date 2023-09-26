@@ -35,31 +35,31 @@ export default function DataPegawai() {
   return (
     <div className="container">
       <div className="table-area">
-        <Table>
+        <Table style={{ fontFamily: "Poppins" }}>
           <TableHead style={{ backgroundColor: "#e4e3e3" }}>
             <TableRow>
-              <TableCell style={{ textAlign: "center", fontWeight: "600" }}>
+              <TableCell style={{ textAlign: "center", fontFamily: "Poppins" }}>
                 No.
               </TableCell>
-              <TableCell style={{ textAlign: "center", fontWeight: "600" }}>
+              <TableCell style={{ textAlign: "center", fontFamily: "Poppins" }}>
                 Nama
               </TableCell>
-              <TableCell style={{ textAlign: "center", fontWeight: "600" }}>
+              <TableCell style={{ textAlign: "center", fontFamily: "Poppins" }}>
                 Provinsi
               </TableCell>
-              <TableCell style={{ textAlign: "center", fontWeight: "600" }}>
+              <TableCell style={{ textAlign: "center", fontFamily: "Poppins" }}>
                 Kabupaten / Kota
               </TableCell>
-              <TableCell style={{ textAlign: "center", fontWeight: "600" }}>
+              <TableCell style={{ textAlign: "center", fontFamily: "Poppins" }}>
                 Kecamatan
               </TableCell>
-              <TableCell style={{ textAlign: "center", fontWeight: "600" }}>
+              <TableCell style={{ textAlign: "center", fontFamily: "Poppins" }}>
                 Kelurahan
               </TableCell>
-              <TableCell style={{ textAlign: "center", fontWeight: "600" }}>
+              <TableCell style={{ textAlign: "center", fontFamily: "Poppins" }}>
                 Jalan
               </TableCell>
-              <TableCell style={{ textAlign: "center", fontWeight: "600" }}>
+              <TableCell style={{ textAlign: "center", fontFamily: "Poppins" }}>
                 Fitur
               </TableCell>
             </TableRow>
